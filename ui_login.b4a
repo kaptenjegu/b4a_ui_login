@@ -1,0 +1,87 @@
+﻿Build1=Default,b4a.example
+File1=bg.png
+File2=bg3.png
+File3=login.bal
+File4=login2.bal
+File5=login3.bal
+File6=logo.png
+File7=logo2.png
+FileGroup1=Default Group
+FileGroup2=Default Group
+FileGroup3=Default Group
+FileGroup4=Default Group
+FileGroup5=Default Group
+FileGroup6=Default Group
+FileGroup7=Default Group
+Group=Default Group
+Library1=core
+ManifestCode='This code will be applied to the manifest file during compilation.~\n~'You do not need to modify it in most cases.~\n~'See this link for for more information: https://www.b4x.com/forum/showthread.php?p=78136~\n~AddManifestText(~\n~<uses-sdk android:minSdkVersion="5" android:targetSdkVersion="28"/>~\n~<supports-screens android:largeScreens="true" ~\n~    android:normalScreens="true" ~\n~    android:smallScreens="true" ~\n~    android:anyDensity="true"/>)~\n~SetApplicationAttribute(android:icon, "@drawable/icon")~\n~SetApplicationAttribute(android:label, "$LABEL$")~\n~CreateResourceFromFile(Macro, Themes.DarkTheme)~\n~'End of default text.~\n~
+Module1=login3
+Module2=page2
+Module3=Starter
+NumberOfFiles=7
+NumberOfLibraries=1
+NumberOfModules=3
+Version=9.8
+@EndOfDesignText@
+#Region  Project Attributes 
+	#ApplicationLabel: UI Login
+	#VersionCode: 1
+	#VersionName: 
+	'SupportedOrientations possible values: unspecified, landscape or portrait.
+	#SupportedOrientations: portrait
+	#CanInstallToExternalStorage: False
+#End Region
+
+#Region  Activity Attributes 
+	#FullScreen: False
+	#IncludeTitle: False
+#End Region
+
+Sub Process_Globals
+	'These global variables will be declared once when the application starts.
+	'These variables can be accessed from all modules.
+
+End Sub
+
+Sub Globals
+	'These global variables will be redeclared each time the activity is created.
+	'These variables can only be accessed from this module.
+
+	Private txtUser As EditText
+	Private txtPassword As EditText
+	Private btnLogin As Button
+	Private lblForgot As Label
+	Dim lyt As Int
+End Sub
+
+Sub Activity_Create(FirstTime As Boolean)
+	'Do not forget to load the layout file created with the visual designer. For example:
+	
+	Activity.LoadLayout("login2")
+	
+	lyt = 1
+	txtUser.Color = Colors.Transparent
+	txtPassword.Color = Colors.Transparent
+End Sub
+
+Sub Activity_Resume
+
+End Sub
+
+Sub Activity_Pause (UserClosed As Boolean)
+
+End Sub
+
+
+Sub btnLogin_Click
+	'ToastMessageShow("User Anda  " & txtUser.Text & " dan Password anda adalah " & txtPassword.Text , False)
+	'ToastMessageShow("tes", False)
+	
+	StartActivity("page2")
+	
+End Sub
+
+Sub lblForgot_Click
+	
+End Sub
